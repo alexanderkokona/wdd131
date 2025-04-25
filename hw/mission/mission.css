@@ -4,9 +4,17 @@
 
 .title {
     text-align: center;
+    letter-spacing: 1;
+    text-transform: capitalize;
 }
 
 h2 {
     color: #006EB6;
+}
+
+
+
+.logo {
+    size: 150px;
 }
 
