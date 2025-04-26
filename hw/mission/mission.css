@@ -1,19 +1,46 @@
 .content {
-    margin: 20px;
+    margin: 100px;
+    font-family: 'Times New Roman', Times, serif; 
 }
 
 .title {
     text-align: center;
-    letter-spacing: 1;
-    text-transform: capitalize;
-    line-height: 1.5;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 25px;
+    margin-bottom: 0px;
 }
 
 h2 {
     color: #006EB6;
+    font-size: 13px;
+    margin-bottom: 0.5px;
+}
+
+.line {
+    border: none;
+    border-top: 0.15px solid black;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+.main-text {
+    letter-spacing: .5px;
+    line-height: 20px;
+}
+
+ol li {
+    margin-bottom: 15px;
+}
+
+.does-list {
+    line-height: 20px;
 }
 
 .logo {
-    size: 150px;
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+    padding-top: 25px;
 }
-
