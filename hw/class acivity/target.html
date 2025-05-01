@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Target Practice challenge learning DOM">
+    <meta name='author' content="Julie Ann Anderson">
+    <title>Target Practice</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #acbfcc;
+            font-family: Roboto;
+            line-height: 1.5em;
+        }
+        header {
+            background-color: black;
+            padding: 50px;
+
+        }
+        header img {
+            width: 25%;
+            display: block;
+            margin:0 auto;
+        }
+        main {
+            max-width: 900px;
+            padding: 25px 75px; 
+            margin: 0 auto;
+        }
+        p{
+            padding: 10px;
+        }
+        li {
+            padding-bottom: 10px;
+        }
+        #char-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+        }
+        footer {
+            background-color: black;
+        }
+        footer p {
+            text-align: center;
+            color: #acbfcc;
+        
+            padding: 50px;
+            margin: 0;
+        }
+        .rounded {
+            border-radius: 10px;
+        }
+        #starship { /* https://live.staticflickr.com/1753/27901489567_327c3d6687_b.jpg */
+            text-align: center;
+        }
+        #starship img {
+            width: 50%;
+        }
+    </style>
+    <script src="target.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Star_Trek_Voyager_Logo.svg" alt="Voyager Logo">
+    </header>
+    <main>
+        <p class="para" id="intro">Under the command of Captain Kathryn Janeway, the <em>Voyager</em> departs on a mission into the treacherous Badlands. They are searching for a missing ship piloted by a team of Maquis rebels.</p>
+    
+        <div id="starship"></div>
+            
+        <p class="para">While in the Badlands, Voyager is enveloped by a powerful energy wave that kills several of its crew, damages the ship, and strands it in the galaxy's Delta Quadrant, more than 70,000 light-years from Earth. The Maquis group is also stranded. The two crews join forces to retrieve crew members being withheld for this purpose and eventually agree to permanently join forces.They begin their now projected 75-year journey home together.</p>
+
+        <div id="char-grid">
+            <img id="crew" src="https://www.kino-teatr.ru/movie/posters/big/2/0/21302.jpg" alt="Voyager Poster">
+            <ul>
+                <li>Chakotay, leader of the Maquis group, is made Voyager's first officer</li>
+                <li>B'Elanna Torres, a half-human/half-Klingon Maquis, becomes chief engineer</li>
+                <li>Vulcan Lieutenant Tuvok,Voyager's security officer who originally secretly infiltrated the Maques</li> 
+                <li>Tom Paris, a former Starfleet officer, becomes Voyager's helm officer</li>
+                <li>The Doctor, an emergency medical hologram designed only for short-term use, is employed as the ship's full-time chief medical officer</li> 
+                <li>Delta Quadrant natives Neelix, a Talaxian scavenger, and Kes, a young Ocampa, are welcomed aboard. Neelix eventually becomes the ship's chef/morale officer and Kes becomes the Doctor's medical assistant</li>
+            </ul>
+        </div>
+        <p class="para">Due to its great distance from Federation space, the Delta Quadrant is unexplored by Starfleet. As they continue their long journey home, the crew passes through regions belonging to various species: the barbaric and belligerent Kazon; the organ-harvesting, disease-ravaged Vidiians; the nomadic hunter race the Hirogen; the fearsome Species 8472 from fluidic space; and most notably the Borg, who control large areas of space that Voyager has to move through. They also encounter perilous natural phenomena, a nebulous area called the Nekrit Expanse, a large area of empty space called The Void, toxic dumping grounds, wormholes, dangerous nebulae and other anomalies.</p>
+    </main>
+    <footer>
+        <p>Information obtained from: https://en.wikipedia.org/wiki/Star_Trek:_Voyager</p>
+    </footer>
+    
+</body>
+</html>
