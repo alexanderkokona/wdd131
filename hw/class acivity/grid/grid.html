@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>
+        Scrollies - Virtue Stories
+    </title>
+    <link href="grid.css" rel="stylesheet">
+</head>
+<body>
+    <div id="content">
+        <header>
+            <img id='head_logo' src="http://andejuli.github.io/wdd131/challenges/grid/scrollies_logo.png" alt="Scrollies Logo">
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="http://scrollies.org/alpha.html">Alphabetical</a>
+                <a href="http://scrollies.org/virtue.html">By Virtue</a>
+                <a href="http://scrollies.org/aboutus.html">About Us</a>
+            </nav>
+        </header>
+        <main id="home_content">
+            <div id="hero">
+                <h1>Scrollies - Virtue Stories</h1>
+                <img src="http://andejuli.github.io/wdd131/challenges/grid/hero.jpg" alt="hero image">
+                <button><a href="http://scrollies.org/virtue.html">Read a Story</a></button>
+            </div>
+            <article id="new">
+                <h2>New Story Addition</h2>
+                <hr>
+                <h4>Virtue: Courage</h4>
+                <img src="http://andejuli.github.io/wdd131/challenges/grid/esther_tn.png" alt="Thumbnail of Esther's head">
+                <h3><a href="http://scrollies.org/esther/index.html">Queen Esther</a></h3>
+            </article>
+            <article id="week">
+                <h2>Story of the Week</h2>
+                <hr>
+                <h4>Virtue: Hard Work</h4>
+                <img src="http://andejuli.github.io/wdd131/challenges/grid/camel_tn.png" alt="Thumbnail of Camel head">
+                <h3><a href="http://scrollies.org/camel/index.html">How the Camel got his Hump</a></h3>
+            </article>
+        </main>
+        <footer>
+            <img id="foot_logo" src="http://andejuli.github.io/wdd131/challenges/grid/scrollies_logo.png" alt="scrollies logo">
+            <p>Scrollies | Copyright&copy; <span></span></p>
+            <div id="social">
+                <a href="https://pinterest.com" target="_blank"><img class='icon' src="http://andejuli.github.io/wdd131/challenges/grid/pinterest.png" alt="Pinterest Logo"></a>
+                <a href="https://instagram.com" target="_blank"><img class='icon' src="http://andejuli.github.io/wdd131/challenges/grid/instagram.png" alt="Instagram Logo"></a>
+                <a href="https://amazon.com" target="_blank"><img class='icon' src="http://andejuli.github.io/wdd131/challenges/grid/amazon.png" alt="Amazon Logo"></a>
+            </div>
+        </footer>
+    </div>
+    <script>/* Current date in footer */
+        const d = new Date();
+        document.querySelector('span').textContent = d.getFullYear();
+    </script>
+</body>
+</html>

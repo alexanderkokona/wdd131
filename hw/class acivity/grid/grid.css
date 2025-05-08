@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Marmelad&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}    
+    
+body {
+    font-family:Marmelad, Times, serif;
+    background-color: #223464;
+}
+#content {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background-color: #dfe3e2;
+}
+#head_logo {
+    justify-self: right;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav a {
+    font-size: 1em;
+    padding: 30px;
+    color: #223464;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color:#4889c9;
+    color: #dfe3e2;
+}
+.active {
+    background-color:#4889c9;
+    color: #dfe3e2;
+}
+#home_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    background-color: #4889c9;
+    padding-bottom: 50px;
+}
+#hero h1 {
+    width: 100%;
+    text-align: center;
+    color: #223464;
+    font-size: 25px;
+    position: absolute;
+    top: 70px;
+}
+#hero {
+    position: relative; 
+}
+#hero img {
+    width: 100%;
+    margin-top: 50px;
+}
+button {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fdb82c;
+    height: 60px;
+    border-radius: 10px;
+}
+button a {
+    color: #223464;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 60px 30px;
+    transition: .5s;
+}
+button a:hover {
+    color: #dfe3e2;
+}
+button:hover {
+    background-color: #4889c9;
+}
+#new, #week {
+    background-color: #dfe3e2;
+    padding: 50px;
+    width: 75%;
+    color: #223464;
+    text-align: center;
+    justify-self: center;
+}
+article img {
+    margin-top: 20px;
+    width: 80px;
+}
+#new, #week {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+hr {
+    margin: 20px;
+}
+h3 {
+    margin-top: 20px;
+    font-size: 1.3em;
+}
+h3 a {
+    color: #223464;
+    
+}
+h3 a:hover {
+   color: #4889c9;
+}
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: space-between;
+    background-color: #dcdedd;
+    padding: 10px;
+}
+#social {
+    text-align: center;
+    padding-top: 10px;
+}
+#foot_logo {
+    display: block;
+    margin: 0 auto;
+}
+footer p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #223464;
+}
+
+
+@media screen and (min-width: 700px) {
+    .header {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
