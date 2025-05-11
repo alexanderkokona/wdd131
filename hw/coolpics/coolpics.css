@@ -20,8 +20,12 @@ header {
 .menu {
     color: white;
 }
-
-
+.foot {
+    background-color:#52489c;
+}
+.toes {
+    color: white;
+}
 
 img {
 	max-width: 100%;
@@ -37,3 +41,21 @@ body {
   }
   
 
+  @media screen and (max-width: 700px) {
+    .gallery {
+      display: grid;
+        grid-template-columns: 1fr;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    .gallery {
+      display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .gallery {
+      display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
