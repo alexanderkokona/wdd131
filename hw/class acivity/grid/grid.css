@@ -141,8 +141,8 @@ footer p {
 
 
 @media screen and (min-width: 700px) {
-    .header {
+    header {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    
 }
