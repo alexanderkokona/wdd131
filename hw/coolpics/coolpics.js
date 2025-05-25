@@ -20,6 +20,7 @@ const closeButton = modal.querySelector('.close-viewer');
 
 gallery.addEventListener('click', (event) => {
     const img = event.target.closest('img');
+    console.log("click")
 
     if (!img) return; // Prevent errors when clicking non-image elements
 

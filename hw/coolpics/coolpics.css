@@ -45,16 +45,21 @@ body {
   display: none;
 }
 
-dialog.image-modal {
+dialog {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog .image-modal {
   border: none;
   padding: 0;
   background: transparent;
-  max-width: 90%;
+  max-width: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-dialog.image-modal img {
-  width: 100%;
-  height: auto;
+dialog .image-modal img {
+  width: 50%;
+  height: 50%;
   display: block;
 }
 
