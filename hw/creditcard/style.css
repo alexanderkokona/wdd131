@@ -1,45 +1,123 @@
-.card-container {
+/* GENERAL RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  /* PARENT GRID */
+  .card-container {
     display: grid;
     position: relative;
-    width: 400px;
-    height: 250px;
+    width: 700px;
+    height: 400px;
     margin: 2rem auto;
   }
-  .card-front, .card-back {
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    background-color: #fff;
-    padding: 1rem;
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-  }
+  
+  /* CARD FRONT */
   .card-front {
+    background-color: #8c42f4;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 2rem;
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    width: 75%;
+    height: 75%;
     z-index: 2;
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1.5rem;
   }
+  
+  /* CARD BACK */
   .card-back {
-    background-color: #f0f0f0;
+    background-color: #7e3bdb;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: rgb(255, 255, 255);
+    padding: 2rem;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    width: 75%;
+    height: 75%;
     z-index: 1;
+  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  /* CHILD: card-image (Top line - "Paying: $99") */
+  .card-image {
+    grid-column: 2 / span 2;
+    grid-row: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* CHILD: cardNumber (Full width input) */
+  .cardNumber {
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  /* CHILD: cardHolder (Bottom-left input) */
+  .cardHolder {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  /* CHILD: expireDate (Bottom-right with MM and YY) */
+  .expireDate {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+  .expireDate label {
+    grid-column: span 2;
+  }
+  
+  .expireDate input {
+    width: 100%;
+  }
+  
+  /* CARD BACK CHILD: cvv */
+  .cvv {
+    display: grid;
+    grid-column: 3;
+    grid-row: 3;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    text-align: right;
   }
 
-  @media screen and (max-width: 700px) {
-    .gallery {
-      display: grid;
-        grid-template-columns: 1fr;
-    }
+  .cvvinput {
+    width: 25%;
+    justify-self: right;
   }
-  @media screen and (min-width: 700px) {
-    .gallery {
-      display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+  
+  /* GENERAL INPUT STYLING */
+  .card-container input {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
   }
-  @media screen and (min-width: 1024px) {
-    .gallery {
-      display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .menu {
-      display: none;
-    }
-  }
+  

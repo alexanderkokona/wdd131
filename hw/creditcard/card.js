@@ -26,7 +26,15 @@ function isCardNumberValid(number) {
     if (enteredDate <= now) {
       errorMsg += 'Expiration date must be in the future.\n';
     }
-  
+
+  //check date
+    const currentDate = new Date()
+    if ('20' + this.expYear.value < currentDate.getFullYear()) {
+    errorMsg += 'Card is expired\n'
+    } else if (this.expMonth.value < currentDate.getMonth()) {
+    errorMsg += 'Card is expired\n'
+    }
+    
     if (errorMsg) {
       displayError(errorMsg);
       return false;
