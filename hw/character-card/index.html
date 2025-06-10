@@ -3,25 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Character Card</title>
+  <title>Gerald the Malevolent</title>
+  <meta name="description" content="Meet Gerald the Malevolent, the Mythic Nightmare!">
+  <meta name="author" content="Alexander Kokona">
   <link href="styles.css" rel="stylesheet">
-  <script src="script.js"> defer</script>
+  <script src="script.js" defer></script>
+  <link rel="icon" href="axolotlhappy.webp" type="image/png" />
+
+  <!-- Social Media Meta Tags -->
+  <meta property="og:title" content="Character Card - Gerald the Malevolent">
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Meet Gerald the Malevolent, the Mythic Nightmare!">
+  <meta property="og:image" content="axolotlhappy.webp">
+  <meta property="og:url" content="https://alexanderkokona.github.io/wdd131/hw/character-card">
+  <meta name="twitter:card" content="summary_large_image">
 
 </head>
 <body>
 
   <div class="card">
-    <img class="image" src="axolotlhappy.webp" alt="Gerald to Malevolent">
+    <img class="image" src="axolotlhappy.webp" alt="Gerald the Malevolent">
     <div class="name">Gerald the Malevolent</div>
     <div class="stats">
-      <p><strong>Class: Mythic Nightmare</strong> <span id="class"></span></p>
-      <p><strong>Level: 5</strong> <span id="level"></span></p>
-      <p><strong>Health: 20</strong> <span id="health"></span></p>
+      <p><strong>Class:</strong> <span id="class"></span></p>
+      <p><strong>Anger:</strong> <span id="anger"></span></p>
+      <p><strong>Hunger:</strong> <span id="hunger"></span></p>
     </div>
 
     <div class="buttons">
-      <button id='attacked'>Attacked</button>
-      <button id='levelup'>Level Up</button>
+      <button id='feed'>Feed</button>
+      <button id='enrageBtn'>Enrage</button>
     </div>
 
     <p id="log"></p>
