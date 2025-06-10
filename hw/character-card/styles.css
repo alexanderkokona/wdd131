@@ -46,3 +46,10 @@ body {
   button:hover {
     background-color: #c828d6;
   }
+
+  #log {
+    color: #f0f4f8;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
