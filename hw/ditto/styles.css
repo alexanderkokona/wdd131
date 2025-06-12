@@ -1,0 +1,42 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .card {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 100px rgba(255, 0, 255, 0.2);
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  #ditto {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    margin: 1rem 0;
+    transition: transform 0.2s ease;
+  }
+  
+  #ditto:hover {
+    transform: scale(1.1);
+  }
+  
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
