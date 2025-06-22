@@ -282,29 +282,58 @@ const recipes = [
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".recipes");
+  const form = document.querySelector("form");
+  const input = form.querySelector("input");
 
-  recipes.forEach((recipe) => {
-    const card = document.createElement("div");
-    card.classList.add("recipe-card");
+  function renderRecipes(filteredRecipes) {
+    container.innerHTML = ''; // Clear existing recipes
 
-    // Validate rating; fallback to 0 if missing or invalid
-    const rating = typeof recipe.rating === 'number' && recipe.rating >= 0 && recipe.rating <= 5 ? recipe.rating : 0;
-    const filledStars = Math.floor(rating);
+    if (filteredRecipes.length === 0) {
+      container.innerHTML = '<p>No recipes found.</p>';
+      return;
+    }
 
-    const stars = Array.from({ length: 5 }, (_, i) => {
-      return `<span aria-hidden="true" class="${i < filledStars ? 'icon-star' : 'icon-star-empty'}">${i < filledStars ? '⭐' : '☆'}</span>`;
-    }).join("");
+    filteredRecipes.forEach((recipe) => {
+      const card = document.createElement("div");
+      card.classList.add("recipe-card");
 
-    card.innerHTML = `
-      <img src="${recipe.image}" alt="${recipe.name}" />
-      <h2>${recipe.name}</h2>
-      <p class="meta">${recipe.recipeYield || ''} &bull; Prep: ${recipe.prepTime}</p>
-      <div class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">
-        ${stars}
-      </div>
-      <p class="description">${recipe.description}</p>
-    `;
+      const rating = typeof recipe.rating === 'number' && recipe.rating >= 0 && recipe.rating <= 5 ? recipe.rating : 0;
+      const filledStars = Math.floor(rating);
 
-    container.appendChild(card);
+      const stars = Array.from({ length: 5 }, (_, i) => {
+        return `<span aria-hidden="true" class="${i < filledStars ? 'icon-star' : 'icon-star-empty'}">${i < filledStars ? '⭐' : '☆'}</span>`;
+      }).join("");
+
+      card.innerHTML = `
+        <img src="${recipe.image}" alt="${recipe.name}" />
+        <h2>${recipe.name}</h2>
+        <p class="meta">${recipe.recipeYield || ''} &bull; Prep: ${recipe.prepTime}</p>
+        <div class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">
+          ${stars}
+        </div>
+        <p class="description">${recipe.description}</p>
+      `;
+
+      container.appendChild(card);
+    });
+  }
+
+  // Initially show all recipes
+  renderRecipes(recipes);
+
+  // Real-time search on input
+  input.addEventListener("input", () => {
+    const query = input.value.trim().toLowerCase();
+
+    const filtered = recipes.filter(recipe => {
+      return recipe.name.toLowerCase().includes(query) || recipe.description.toLowerCase().includes(query);
+    });
+
+    renderRecipes(filtered);
+  });
+
+  // Prevent form submission from reloading the page
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
   });
 });
