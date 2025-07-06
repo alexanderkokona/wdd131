@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+/* Reset + base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgb(55, 163, 240);
+  --background-color: #f9f9f9;
+  --text-color: #222;
+  --accent-color: #0077cc;
+  --font-primary: Arial, Helvetica, sans-serif;
+  --font-secondary: 'Mooli', sans-serif;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1, h2{
+  margin-bottom: 0.75rem;
+  color: var(--accent-color);
+  font-family: var(--font-secondary);
+}
+
+/* Paragraphs */
+p{
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+/* Logo styles */
+.logo {
+  width: 150px;
+  margin-right: 1rem;
+}
+
+.logo2 {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Wireframe image styles */
+.wireframe-home,
+.wireframe-shop {
+  width: 50%;
+  height: 50%
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Font preview */
+p[style*="font-family"] {
+  font-size: 1.2rem;
+  background: #fff;
+  border-left: 6px solid var(--primary-color);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Color block */
+div[style*="background-color"] {
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .logo2 {
+    max-width: 100%;
+  }
+}
